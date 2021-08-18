@@ -9,6 +9,12 @@ jobs:
     - uses: actions/checkout@v2 # Adds a step to checkout the repository code
     - name: Build C# Code
       run: dotnet build
+      
+    - name: Install npm
+      run: npm install
+      
+    - name: Build TypeSript Code
+      run: npm run build
     
     - name: Run C# Tests
       run: dotnet test
