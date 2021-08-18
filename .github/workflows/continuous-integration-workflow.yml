@@ -27,9 +27,10 @@ jobs:
       
     - name: Run npm lint test
       working-directory: DotnetTemplate.Web
-      run: npm run lint
-      
+      run: npm run lin
+     
     - uses: jdcargile/ms-teams-notification@v1.3
+      if: ${{ failure() }}
       with:
           github-token: ${{ github.token }} # this will use the runner's token.
           ms-teams-webhook-uri: ${{ secrets.MS_TEAMS_WEBHOOK_URI }}
