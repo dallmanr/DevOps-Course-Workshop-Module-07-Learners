@@ -27,7 +27,7 @@ jobs:
       
     - name: Run npm lint test
       working-directory: DotnetTemplate.Web
-      run: npm run lin
+      run: npm run lint
      
     - uses: jdcargile/ms-teams-notification@v1.3
       if: ${{ failure() }}
