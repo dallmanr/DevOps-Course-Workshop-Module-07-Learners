@@ -30,7 +30,7 @@ jobs:
       run: npm run lint
       
     - uses: jdcargile/ms-teams-notification@v1.3
-    with:
+      with:
           github-token: ${{ github.token }} # this will use the runner's token.
           ms-teams-webhook-uri: ${{ secrets.MS_TEAMS_WEBHOOK_URI }}
           notification-summary: Teams notification 
